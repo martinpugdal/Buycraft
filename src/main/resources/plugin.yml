@@ -1,0 +1,32 @@
+name: BuyCraft
+version: '${project.version}'
+main: dk.martinersej.buycraft.BuyCraft
+author: MartinErSej
+depend: ['CoinSystem']
+softdepend: ['UnikPay', 'PlaceholderAPI']
+commands:
+  buy:
+    aliases: [ store, buycraft ]
+    description: Open the buy menu
+  buyadmin:
+    aliases: [ badmin ]
+    description: admin commands for buy
+  buyclaim:
+    aliases: [ claim ]
+    description: Claim items
+default-permission: true
+permissions:
+  buycraft.admin.*:
+    children:
+      - buycraft.admin.reload
+    default: op
+  buycraft.coins.*:
+    children:
+      - buycraft.coins.pay
+      - buycraft.coins.add
+      - buycraft.coins.remove
+      - buycraft.coins.request
+      - buycraft.coins.set
+      - buycraft.coins.reset
+      - buycraft.coins.other
+    default: op

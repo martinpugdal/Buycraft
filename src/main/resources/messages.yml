@@ -1,0 +1,17 @@
+messages:
+  player-not-found: "&2&l[!] &fSpilleren findes ikke."
+  player-never-played-before: "&2&l[!] &f%player_name% har aldrig spillet før."
+  not-a-number: "&2&l[!] &fBeløbet er ikke et tal."
+buycraft:
+  inventory-full: "&2&l[!] &fDin inventar er fuld, hent dem gennem /claim"
+  inventory-full-claim: "&2&l[!] &fDin inventar er fuld, gør plads til at hente dine ting."
+  no-items-to-claim: "&2&l[!] &fDer er ingen ting at hente, køb noget i shoppen."
+  already-bought: "&2&l[!] &fDu har allerede købt dette produkt!"
+  coins:
+    not-enough-coins: "&2&l[!]&f Du har ikke nok &eCoins&f, du mangler %coins_amount% &eCoins&f."
+    cancel-word: "cancel"
+    send-start-message:
+      - "&2&l[!] &f&oDu ønsker at købe &e&ocoins&f&o, skriv hvor mange &e&ocoins&f&o du ønsker at købe."
+      - "&2&l[!] &f&oSkriv &c&o%cancel_word% &f&ofor at annullere købet."
+    cancelled: "&2&l[!] &fDu har annulleret købet."
+    below-minimum: "&2&l[!] &fDu skal købe mindst %minimum_coins% &eCoins&f."

@@ -1,0 +1,332 @@
+claimmenu:
+  title: '&a&lClaim'
+menus:
+  mainmenu:
+    home: true
+    type: Chest
+    title: '&a&lBuycraft'
+    rows: 5
+    slots:
+      0-8:
+        item:
+          type: stained glass pane
+          data: 1
+      36-44:
+        item:
+          type: stained glass pane
+          data: 1
+      4:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWJkYTVmMzE5MzdiMmZmNzU1MjcxZDk3ZjAxYmU4NGQ1MmE0MDdiMzZjYTc3NDUxODU2MTYyYWM2Y2ZiYjM0ZiJ9fX0=
+          display-name: '&e&lCOINS'
+          lore:
+            - '&fKlik her for at købe &eCoins&f.'
+            - ''
+            - '&fDu bliver sendt videre til køb af coins.'
+            - ''
+            - '&fDine &eCoins&f: %coinsystem_coins%'
+            - ''
+        buy-coins: true
+      20:
+        item:
+          type: book
+          glowing: true
+          amount: 1
+          display-name: '&6&lRANKS'
+          lore:
+            - '&fKlik her for at købe følgende &6Ranks&f;'
+            - '&f➥ &bTitan'
+            - '&f➥ &aKing'
+            - '&f➥ &6Reflex'
+            - '&f➥ &6Reflex&e+'
+            - ''
+        openmenu: rankmenu
+      22:
+        item:
+          type: book
+          glowing: true
+          amount: 1
+          display-name: '&e&lKITS'
+          lore:
+            - '&fKlik her for at købe følgende &eKits&f;'
+            - '&f➥ &dGem'
+            - '&f➥ &eGambler'
+            - ''
+        openmenu: kitmenu
+      24:
+        item:
+          type: book
+          glowing: true
+          amount: 1
+          display-name: '&b&lANDET'
+          lore:
+            - '&fKlik her for at købe følgende;'
+            - '&f➥ &7Speed&f Fjer'
+            - '&f➥ &4Strength&f Dust'
+            - '&f➥ &6Reflex &eKey &f(&oKan indløses i Spawn&f)'
+            - ''
+        openmenu: andetmenu
+      40:
+        item:
+          type: barrier
+          display-name: '&c&lLuk'
+        close-on-click: true
+  rankmenu:
+    type: chest
+    title: "&a&lRanks"
+    rows: 5
+    slots:
+      0-8:
+        item:
+          type: stained glass pane
+          data: 1
+      36-44:
+        item:
+          type: stained glass pane
+          data: 1
+      19:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzY5MGQ0YjQ2M2VhYzM3ZmZkYWFiMmVhOGQzODQ2N2MxZWZkMWI4ZmU5MDZhNDQ3NTk5YzMxZWNiZDY5YTUyNCJ9fX0=
+          display-name: '&f【&b&lTITAN&f】'
+          lore:
+            - '&fKlik her for at købe &bTitan&f Rank'
+            - ''
+            - '&fVed køb af dette &6Rank&f modtager du;'
+            - '&f➥ &eKit &bTitan &f(&oIndhold kan ses i Kit menu''en&f)'
+            - '&f➥ Adgang til &eDonator&f Shoppen'
+            - '&f➥ &a$&f1.500 (&oEngangs Beløb&f)'
+            - '&f➥ 20% mere &eELO&f ved &cKills'
+            - '&f➥ &dGem&f Drop-Rate ændres til &e1&f%'
+            - '&f➥ &6Loot&fBox Drop-Rate ændres til &e2&f%'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 2500
+          onetime-purchase:
+            permission:
+              check-for: "Rank.Titan"
+          commands:
+            - "lp user %player% parent add Titan"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &bTitan&f Rank!"
+      21:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkwNzkzZjU2NjE2ZjEwMTUwMmRlMWQzNGViMjU0NGY2MDdkOTg5MDBlMzY5OTM2OTI5NTMxOWU2MzBkY2Y2ZCJ9fX0=
+          display-name: '&f【&a&lKING&f】'
+          lore:
+            - '&fKlik her for at købe &aKing&f Rank'
+            - ''
+            - '&fVed køb af dette &6Rank&f modtager du;'
+            - '&f➥ &eKit &aKing &f(&oIndhold kan ses i Kit menu''en&f)'
+            - '&f➥ Adgang til &eDonator&f Shoppen'
+            - '&f➥ &a$&f2.000 (&oEngangs Beløb&f)'
+            - '&f➥ 25% mere &eELO&f ved &cKills'
+            - '&f➥ &dGem&f Drop-Rate ændres til &e2.0&f%'
+            - '&f➥ &6Loot&fBox Drop-Rate ændres til &e2.5&f%'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 4500
+          onetime-purchase:
+            permission:
+              check-for: "Rank.King"
+          commands:
+            - "lp user %player% parent add King"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &aKing&f Rank!"
+      23:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODcyNWQxMWZlMWQ3YmUxNjdlYzVjYzc2OTdjZGZjMjU1NzM3NzRlZTQxYjhjM2IzNzI2MWU0M2Q1ZDMxOGZjMyJ9fX0=
+          display-name: '&f【&6&lREFLEX&f】'
+          lore:
+            - '&fKlik her for at købe &6Reflex&f Rank'
+            - ''
+            - '&fVed køb af dette &6Rank&f modtager du;'
+            - '&f➥ &eKit &6Reflex &f(&oIndhold kan ses i Kit menu''en&f)'
+            - '&f➥ Adgang til &eDonator&f Shoppen'
+            - '&f➥ &a$&f2.500 (&oEngangs Beløb&f)'
+            - '&f➥ 30% mere &eELO&f ved &cKills'
+            - '&f➥ &dGem&f Drop-Rate ændres til &e2.5&f%'
+            - '&f➥ &6Loot&fBox Drop-Rate ændres til &e3&f%'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 6250
+          onetime-purchase:
+            permission:
+              check-for: "Rank.Reflex"
+          commands:
+            - "lp user %player% parent add Reflex"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &6Reflex&f Rank!"
+      25:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTY4NTNlYzFjNDBjOTI2ZTRhN2I1ZWQ1YTlkZDJjMGY2OTBiYzU4MzAyMTZjYjE4MmY1ZDkxODVjM2FhMjJlOCJ9fX0=
+          display-name: '&f【&6&lREFLEX&e&l+&f】'
+          lore:
+            - '&fKlik her for at købe &6Reflex&e+&f Rank'
+            - ''
+            - '&fVed køb af dette &6Rank&f modtager du;'
+            - '&f➥ &eKit &bTitan&f, &aKing&f & &6Reflex &f(&oIndhold kan ses i Kit menu''en&f)'
+            - '&f➥ Adgang til &eDonator&f Shoppen'
+            - '&f➥ &a$&f2.000 (&oEngangs Beløb&f)'
+            - '&f➥ 35% mere &eELO&f ved &cKills'
+            - '&f➥ &dGem&f Drop-Rate ændres til &e3&f%'
+            - '&f➥ &6Loot&fBox Drop-Rate ændres til &e3.5&f%'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 8150
+          onetime-purchase:
+            permission:
+              check-for: "Rank.Reflex+"
+          commands:
+            - "lp user %player% parent add Reflex+"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &6Reflex&e+&f Rank!"
+      40:
+        item:
+          type: barrier
+          display-name: '&c&lTilbage'
+        openmenu: mainmenu
+  kitmenu:
+    type: chest
+    title: "&a&lKITS"
+    rows: 5
+    slots:
+      0-8:
+        item:
+          type: stained glass pane
+          data: 1
+      36-44:
+        item:
+          type: stained glass pane
+          data: 1
+      21:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGJjMjdiZTVjMWU2NTg3MmQ5ZGJhYjRkMWUzMTg1OGNkYjc3M2FiNjI0ZGYwYTYyZjQ4NTcwODMwNDg0YjFjNiJ9fX0=
+          display-name: '&f【&e&lGAMBLER&f】'
+          lore:
+            - '&fKlik her for at købe &eGambler&f Kit'
+            - ''
+            - '&fKittet har følgende ting;'
+            - '&f➥ 3x &aEmerald&f Keys'
+            - '&f➥ 1x &4Redstone&f Key'
+            - '&f➥ 1x &1Lapis&f Key'
+            - '&f➥ Cooldown: 8 Timer'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 1000
+          onetime-purchase:
+            permission:
+              check-for: "CustomKit.Gambler"
+          commands:
+            - "lp user %player% permission add CustomKit.Gambler"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &eGambler&f Kit!"
+      23:
+        item:
+          type: skull_item
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGFlODczOGJhNmJiMDA0Y2M2MzhlNGFmMzQyODA0MDNhMjUyNjVlZjM2OWQ2ODk2M2Y0N2EzYzdlYjZjNGRiMCJ9fX0=
+          display-name: '&f【&d&lGEM&f】'
+          lore:
+            - '&fKlik her for at købe &dGem&f Kit'
+            - ''
+            - '&fKittet har følgende ting;'
+            - '&f➥ 23.6% Chance for en Random &dGem'
+            - '&f➥ Cooldown: 12 Timer'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 2500
+          onetime-purchase:
+            permission:
+              check-for: "CustomKit.Gem"
+          commands:
+            - "lp user %player% permission add CustomKit.Gem"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt &dGem&f Kit!"
+      40:
+        item:
+          type: barrier
+          display-name: '&c&lTilbage'
+        openmenu: mainmenu
+  andetmenu:
+    type: chest
+    title: "&a&lANDET"
+    rows: 5
+    slots:
+      0-8:
+        item:
+          type: stained glass pane
+          data: 1
+      36-44:
+        item:
+          type: stained glass pane
+          data: 1
+      20:
+        item:
+          type: feather
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdhMzcwMzgzODc1NThkYjY1ZmRlOTMyNGMxZTU3MjlmYmIzNDkwYWM2YWFkZDc3MjVmZjJjN2ExZmU2In19fQ==
+          display-name: '&f【&7&lSPEED &F&lFJER&f】'
+          lore:
+            - '&fKlik her for at købe &7Speed&f Fjer.'
+            - ''
+            - '&fProduktet har følgende;'
+            - '&f➥ 3x &7Speed&f Fjer (&oI 10 sekunder&f)'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 1350
+          commands:
+            - "cosmetic %player% SpeedFjer 3"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt 3x &7Speed &fFjer!"
+      22:
+        item:
+          type: nether_stalk
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjZjYTkyYjY1YTRhZjgyOTYyMGY3NjIzODdiNzNlOTE0YThjYWM3ZTlkMjViYjM4NWIyYzY1ZDM0OThiNzIifX19
+          display-name: '&f【&4&lSTRENGTH &F&lDUST&f】'
+          lore:
+            - '&fKlik her for at købe &4Strength &fDust.'
+            - ''
+            - '&fProduktet har følgende;'
+            - '&f➥ 3x &4Strength &fDust (&oI 10 sekunder&f)'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 1350
+          commands:
+            - "cosmetic %player% StrengthDust 3"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt 3x &4Strength &fDust!"
+      24:
+        item:
+          type: tripwire_hook
+          skull-texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTZjMTZjY2E2ODUxZDNmY2NmNTlmZTY1ZTJlODU0MWY3MTBiZWUyOGRhMjlmNGQ5MGI0MWNlODI3ZmEzYTU4In19fQ==
+          display-name: '&f【&6&lREFLEX &f&lKEY&f】'
+          lore:
+            - '&fKlik her for at købe &6Reflex &eKey&f.'
+            - ''
+            - '&fProduktet har følgende;'
+            - '&f➥ 3x &6Reflex &eKeys &f(&oKan indløses i Spawn&f)'
+            - ''
+            - '&fKoster: %price% &ecoins'
+        product:
+          price: 1500
+          commands:
+            - "crate gk %player% Reflex 3"
+          broadcasts:
+            - "&2&l[!]&a %player%&f har lige købt 3x &6Reflex &eKeys&f!"
+      40:
+        item:
+          type: barrier
+          display-name: '&c&lTilbage'
+        openmenu: mainmenu

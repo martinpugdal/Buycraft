@@ -1,0 +1,37 @@
+buycraft:
+  payment:
+    unikpay: true
+    broadcast:
+      on-buy: true
+      on-join: false
+      broadcasts:
+        - '&e&l[!]&f &6%player%&f har lige købt &6%amount% &eCoins&f!'
+    message:
+      on-join: true
+      messages:
+        - "&e&l[!]&f Du købte &6%amount% &eCoins&f!"
+  coins:
+    buy-minimum: 100
+    pay-minimum: 10 # minimum amount of coins that can be paid
+  discount:
+    date-format: "yyyy-dd-MM HH:mm:ss" # date format for start-date and end-date
+    discounts:
+      - name: "Summer Sale"
+        discount: 50
+        start-date: "2023-18-06 00:00:00"
+        end-date: "2023-20-08 00:00:00"
+        discount-on-everything: false
+        broadcasts:
+          - "&aSummer Sale is now active!"
+          - "&aGet %discount% off on everything!"
+      - name: "Winter Sale"
+        discount: 50
+        start-date: "2023-18-12 00:00:00"
+        end-date: "2024-20-01 00:00:00"
+        discount-on-everything: false
+        broadcasts:
+          - "&a%name% is now active!"
+          - "&aGet %discount% off on some products!"
+  webhooks:
+    coins-bought: "https://discord.com/api/webhooks/1125515885298319390/CkrVg4MY4CC2vSqTfvXvxSLSgfUBlmPnYqrxeVW_9iUtfnOwZQZPs4AJZDva5frrCy92"
+    buycraft-bought: "https://discord.com/api/webhooks/1145850403519475712/prARgnfEAjSwvfzm_fx7B0u04KyrBqoEcMITh5snEbD2NrELy7WxvZRYPOzCopL13d26"
